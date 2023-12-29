@@ -1,0 +1,215 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  background-color: hsl(226, 43%, 10%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+body .all {
+  display: grid;
+  grid-template-columns: 0.5fr repeat(4, 1fr) 0.5fr;
+  grid-template-rows: 0fr repeat(2, 1fr) 0fr;
+  gap: 20px;
+}
+
+body .all .user {
+  grid-column: 2/3;
+  grid-row: 2/4;
+  padding: 0px;
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 15px;
+}
+
+body .all .work {
+  grid-row: 2/4;
+  grid-column: 3/4;
+  height: 185px;
+  width: 100%;
+}
+
+body .all .work.play {
+  grid-column: 4/5;
+}
+
+body .all .work.study {
+  grid-column: 5/6;
+}
+
+body .all .work.exercise {
+  grid-row: 3/4;
+  grid-column: 3/4;
+}
+
+body .all .work.social {
+  grid-row: 3/4;
+  grid-column: 4/5;
+}
+
+body .all .work.self {
+  grid-row: 3/4;
+  grid-column: 5/6;
+}
+
+@media (max-width: 900px) {
+  body .all {
+    display: grid;
+    grid-template-columns: auto repeat(4, 1fr) auto;
+    grid-template-rows: 0fr repeat(2, 1fr) 0fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 730px) {
+}
+
+body .all .user .userContainer .im {
+  width: 53px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 53px;
+  border-radius: 50%;
+  background-color: white;
+  margin-bottom: 40px;
+}
+
+body .all .user .userContainer .im img {
+  width: 50px;
+}
+
+body .all .user .userContainer p {
+  font-weight: 300;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+body .all .user .userContainer h1 {
+  font-weight: 300;
+  padding: 5px 0px 30px;
+}
+
+body .all .user .userContainer {
+  background-color: #5746ea;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+body .all .user .days h4 {
+  font-weight: 400;
+  font-size: 14px;
+  width: 100%;
+  padding: 0px 20px 20px;
+  color: #6a6fa8;
+}
+
+body .all .user .days {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+body .all .user .days .week {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+body .all .user .days .mounth {
+  padding: 0px 20px;
+}
+
+body .all .work {
+  border-radius: 15px;
+  position: relative;
+}
+
+body .all .work .space {
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 15px;
+  padding: 20px;
+  position: absolute;
+  width: 100%;
+  top: 40px;
+}
+
+body .all .work .space .bet {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+body .all .work .space .bet h3 {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+body .all .work .space h1 {
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+body .all .work .space p,
+body .all .work .space p span {
+  color: #6a6fa8;
+  font-size: 13px;
+  padding-bottom: 10px;
+}
+body .all .work .space p span {
+  padding: 0px 2px;
+}
+
+body .all .work .up {
+  background-color: hsl(15, 100%, 70%);
+  border-radius: 15px;
+  display: flex;
+  overflow: hidden;
+  justify-content: flex-end;
+}
+
+body .all .work .up svg {
+  transform: translate(-20px, -13px) scale(0.8, 0.8);
+}
+
+body .all .work.play .up {
+  background-color: hsl(195, 74%, 62%);
+}
+
+body .all .work.study .up {
+  background-color: hsl(348, 100%, 68%);
+}
+
+body .all .work.exercise .up {
+  background-color: hsl(145, 58%, 55%);
+}
+
+body .all .work.social .up {
+  background-color: hsl(264, 64%, 52%);
+}
+
+body .all .work.self .up {
+  background-color: hsl(43, 84%, 65%);
+}
+
+.bet svg {
+  cursor: pointer;
+}
+
+@media (max-width: 755px) {
+  body .all {
+    display: block;
+  }
+  body .all .user {
+    margin-top: 1100px;
+  }
+  body .all .work {
+    margin-bottom: 30px;
+  }
+}
